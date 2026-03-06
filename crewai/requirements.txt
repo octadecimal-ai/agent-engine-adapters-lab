@@ -1,0 +1,4 @@
+crewai>=1.10.0
+crewai-tools>=1.10.0
+langfuse>=3.0.0
+llm-provider>=0.40.0

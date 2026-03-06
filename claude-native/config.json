@@ -1,0 +1,26 @@
+{
+  "engine": "llm-native",
+  "name": "automation assistant Native",
+  "version": "1.0.0",
+  "runtime": {
+    "command": "llm",
+    "args": ["--dangerously-skip-permissions"],
+    "working_dir": "teams/{team_id}/",
+    "env": {
+      "AGENTS_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+    }
+  },
+  "features": {
+    "agent_teams": true,
+    "subagents": true,
+    "mcp_servers": true,
+    "skills": true,
+    "memory_engram": true,
+    "langfuse_tracing": true
+  },
+  "limits": {
+    "max_concurrent_sessions": 3,
+    "max_turns_per_task": 50,
+    "timeout_minutes": 30
+  }
+}

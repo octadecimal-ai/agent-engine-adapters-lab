@@ -1,0 +1,33 @@
+{
+  "engine": "langgraph",
+  "name": "LangGraph",
+  "version": "1.0.0",
+  "status": "available",
+  "runtime": {
+    "command": "python3",
+    "args": ["engines/langgraph/adapter.py"],
+    "venv": "engines/langgraph/.venv",
+    "requirements": "engines/langgraph/requirements.txt"
+  },
+  "features": {
+    "agent_teams": true,
+    "subagents": true,
+    "mcp_servers": false,
+    "skills": false,
+    "memory_engram": true,
+    "langfuse_tracing": true,
+    "graph_visualization": true,
+    "conditional_edges": true,
+    "state_persistence": true
+  },
+  "model_config": {
+    "provider": "llm-provider",
+    "model": "llm-sonnet-4-6",
+    "temperature": 0.1
+  },
+  "limits": {
+    "max_concurrent_graphs": 2,
+    "max_steps": 25,
+    "timeout_minutes": 15
+  }
+}

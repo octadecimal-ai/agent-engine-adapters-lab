@@ -1,0 +1,78 @@
+{
+  "version": "1.0.0",
+  "description": "Engine abstraction layer — ujednolicony interfejs dla silników orkiestracji",
+  "engines": {
+    "llm-native": {
+      "name": "automation assistant Native",
+      "status": "active",
+      "description": "Natywna orkiestracja automation assistant z Agent Teams i subagentami",
+      "adapter": "engines/llm-native/adapter.sh",
+      "config": "engines/llm-native/config.json",
+      "supports": {
+        "memory": true,
+        "langfuse": true,
+        "mcp_servers": true,
+        "skills": true,
+        "subagents": true
+      }
+    },
+    "crewai": {
+      "name": "CrewAI",
+      "status": "active",
+      "description": "CrewAI orkiestracja z YAML-based roles (Python)",
+      "adapter": "engines/crewai/adapter.py",
+      "config": "engines/crewai/config.json",
+      "supports": {
+        "memory": true,
+        "langfuse": true,
+        "mcp_servers": false,
+        "skills": false,
+        "subagents": true
+      }
+    },
+    "langgraph": {
+      "name": "LangGraph",
+      "status": "active",
+      "description": "LangGraph orkiestracja grafowa z conditional edges i state persistence",
+      "adapter": "engines/langgraph/adapter.py",
+      "config": "engines/langgraph/config.json",
+      "supports": {
+        "memory": true,
+        "langfuse": true,
+        "mcp_servers": false,
+        "skills": false,
+        "subagents": true
+      }
+    },
+    "metagpt": {
+      "name": "MetaGPT",
+      "status": "active",
+      "description": "MetaGPT multi-agent SOP framework z role-based agents",
+      "adapter": "engines/metagpt/adapter.py",
+      "config": "engines/metagpt/config.json",
+      "supports": {
+        "memory": true,
+        "langfuse": true,
+        "mcp_servers": false,
+        "skills": false,
+        "subagents": true
+      }
+    }
+  },
+  "adapter_interface": {
+    "description": "Każdy adapter musi implementować te komendy:",
+    "commands": {
+      "run": "Uruchom zadanie: adapter run <team_id> <task_json>",
+      "status": "Sprawdź status: adapter status <task_id>",
+      "stop": "Zatrzymaj: adapter stop <task_id>"
+    },
+    "output_format": {
+      "task_id": "string",
+      "status": "running|completed|failed|stopped",
+      "result": "object|null",
+      "tokens_used": "number",
+      "cost_usd": "number",
+      "duration_sec": "number"
+    }
+  }
+}

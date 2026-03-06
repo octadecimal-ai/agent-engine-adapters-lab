@@ -1,0 +1,30 @@
+{
+  "engine": "crewai",
+  "name": "CrewAI",
+  "version": "1.0.0",
+  "runtime": {
+    "command": "python3",
+    "args": ["engines/crewai/adapter.py"],
+    "venv": "engines/crewai/.venv",
+    "requirements": "engines/crewai/requirements.txt"
+  },
+  "features": {
+    "agent_teams": true,
+    "subagents": true,
+    "mcp_servers": false,
+    "skills": false,
+    "memory_engram": true,
+    "langfuse_tracing": true
+  },
+  "model_config": {
+    "provider": "llm-provider",
+    "model": "llm-sonnet-4-6",
+    "temperature": 0.1,
+    "max_tokens": 4096
+  },
+  "limits": {
+    "max_concurrent_crews": 2,
+    "max_iterations": 15,
+    "timeout_minutes": 20
+  }
+}

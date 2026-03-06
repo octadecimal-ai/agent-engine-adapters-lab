@@ -1,0 +1,3 @@
+metagpt>=0.8.0
+# NOTE: metagpt 0.8.x pins llm-provider==0.18.1 — nie dodawać llm-provider>=0.40.0 (konflikt)
+# langfuse wymaga osobnej instalacji po metagpt: pip install langfuse>=3.0.0 --no-deps
