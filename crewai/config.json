@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "runtime": {
     "command": "python3",
-    "args": ["engines/crewai/adapter.py"],
-    "venv": "engines/crewai/.venv",
-    "requirements": "engines/crewai/requirements.txt"
+    "args": ["crewai/adapter.py"],
+    "venv": "crewai/.venv",
+    "requirements": "crewai/requirements.txt"
   },
   "features": {
     "agent_teams": true,

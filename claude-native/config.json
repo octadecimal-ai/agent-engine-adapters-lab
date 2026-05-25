@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "runtime": {
     "command": "llm",
-    "args": ["--dangerously-skip-permissions"],
+    "args": ["--print"],
     "working_dir": "teams/{team_id}/",
     "env": {
       "AGENTS_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"

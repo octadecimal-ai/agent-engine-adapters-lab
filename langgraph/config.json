@@ -5,9 +5,9 @@
   "status": "available",
   "runtime": {
     "command": "python3",
-    "args": ["engines/langgraph/adapter.py"],
-    "venv": "engines/langgraph/.venv",
-    "requirements": "engines/langgraph/requirements.txt"
+    "args": ["langgraph/adapter.py"],
+    "venv": "langgraph/.venv",
+    "requirements": "langgraph/requirements.txt"
   },
   "features": {
     "agent_teams": true,

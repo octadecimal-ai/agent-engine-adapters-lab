@@ -18,6 +18,7 @@ Usage:
 """
 
 import json
+import os
 import subprocess
 from pathlib import Path
 from typing import Optional
@@ -25,7 +26,7 @@ from urllib.request import Request, urlopen
 from urllib.error import URLError
 
 
-QDRANT_URL = "http://100.112.122.1:6333"
+QDRANT_URL = os.getenv("QDRANT_URL", "http://localhost:6333")
 QDRANT_COLLECTIONS = ["global_knowledge", "agent_memory"]
 
 

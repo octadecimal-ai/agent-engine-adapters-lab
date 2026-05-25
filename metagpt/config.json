@@ -5,9 +5,9 @@
   "status": "available",
   "runtime": {
     "command": "python3",
-    "args": ["engines/metagpt/adapter.py"],
-    "venv": "engines/metagpt/.venv",
-    "requirements": "engines/metagpt/requirements.txt"
+    "args": ["metagpt/adapter.py"],
+    "venv": "metagpt/.venv",
+    "requirements": "metagpt/requirements.txt"
   },
   "features": {
     "agent_teams": true,

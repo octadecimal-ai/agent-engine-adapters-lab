@@ -20,7 +20,7 @@ import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
-PROJECT_DIR = Path(__file__).resolve().parent.parent.parent
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 ENGINE_DIR = Path(__file__).resolve().parent
 TEAMS_DIR = PROJECT_DIR / "teams"
 TASKS_DIR = PROJECT_DIR / ".engine-tasks"
